@@ -1,3 +1,4 @@
+
 import "swiper/css";
 import "swiper/css/pagination";
 import "./marquee.css";
@@ -5,7 +6,7 @@ import "./global.css";
 
 import HomePage from "./pages/HomePage";
 
-function App() {
+function App(): JSX.Element {
   return <HomePage />;
 }
 
