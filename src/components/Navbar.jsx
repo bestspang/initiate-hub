@@ -17,7 +17,6 @@ const Navbar = () => {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
-  
   return (
     <nav className={cn("navbar", scrolled && "scrolled")}>
       <div className="container">
