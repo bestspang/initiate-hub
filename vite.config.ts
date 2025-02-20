@@ -4,9 +4,8 @@ import react from "@vitejs/plugin-react";
 import tailwindcss from "@tailwindcss/vite";
 import { componentTagger } from "lovable-tagger";
 import path from "path";
-import type { UserConfig } from 'vite';
 
-const config: UserConfig = {
+export default defineConfig({
   plugins: [
     react(),
     tailwindcss(),
@@ -23,7 +22,6 @@ const config: UserConfig = {
     alias: {
       "@": path.resolve(__dirname, "./src"),
     },
-  },
-};
-
-export default defineConfig(config);
+    extensions: ['.js', '.jsx', '.ts', '.tsx']
+  }
+});
