@@ -6,8 +6,8 @@ import "./global.css";
 
 import HomePage from "./pages/HomePage";
 
-const App = () => {
+const App = (): JSX.Element => {
   return <HomePage />;
-}
+};
 
 export default App;
