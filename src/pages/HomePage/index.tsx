@@ -17,7 +17,7 @@ const HomePage = () => {
   return (
     <Fragment>
       <Navbar />
-      <div className="container-home">
+      <main className="container-home">
         <Banner1 />
         <Banner2 />
         <ServicesSection />
@@ -27,7 +27,7 @@ const HomePage = () => {
         <B2BService />
         <PartnerSection />
         <BlogSection />
-      </div>
+      </main>
       <Footer />
     </Fragment>
   );
