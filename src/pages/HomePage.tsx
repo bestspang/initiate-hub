@@ -1,4 +1,4 @@
-import { Fragment, useEffect, useState } from "react";
+import { FC, Fragment, useEffect, useState } from "react";
 import { Marquee } from "@devnomic/marquee";
 import "./HomePage.css";
 import Navbar from "../components/Navbar";
@@ -8,14 +8,16 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination } from "swiper/modules";
 import { cn } from "../utils";
 
-const HomePage = () => {
-  const [tabWhyUs, setTabWhyUs] = useState("tab1");
-  const onChangeTabWhyUs = (tabActive) => {
+type TabWhyUs = "tab1" | "tab2";
+
+const HomePage: FC = () => {
+  const [tabWhyUs, setTabWhyUs] = useState<TabWhyUs>("tab1");
+  const [activeIndex, setActiveIndex] = useState<number>(0);
+  const [isPaused, setIsPaused] = useState<boolean>(false);
+
+  const onChangeTabWhyUs = (tabActive: TabWhyUs): void => {
     setTabWhyUs(tabActive);
   };
-
-  const [activeIndex, setActiveIndex] = useState(0);
-  const [isPaused, setIsPaused] = useState(false);
 
   useEffect(() => {
     if (isPaused) return;
@@ -775,8 +777,8 @@ const HomePage = () => {
             <div className="chat-group">
               <a
                 href="#"
-                // target="_blank"
-                // rel="noopener noreferrer"
+                target="_blank"
+                rel="noopener noreferrer"
               >
                 <button className="d-btn btn-messenger">
                   <img
@@ -788,8 +790,8 @@ const HomePage = () => {
               </a>
               <a
                 href="#"
-                // target="_blank"
-                // rel="noopener noreferrer"
+                target="_blank"
+                rel="noopener noreferrer"
               >
                 <button className="d-btn btn-line">
                   <img
