@@ -2,13 +2,25 @@
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 import tailwindcss from "@tailwindcss/vite";
+import { componentTagger } from "lovable-tagger";
+import path from "path";
 import type { UserConfig } from 'vite';
 
 const config: UserConfig = {
-  plugins: [react(), tailwindcss()],
+  plugins: [
+    react(),
+    tailwindcss(),
+    process.env.NODE_ENV === 'development' && componentTagger(),
+  ].filter(Boolean),
   server: {
-    port: 8080
-  }
+    host: "::",
+    port: 8080,
+  },
+  resolve: {
+    alias: {
+      "@": path.resolve(__dirname, "./src"),
+    },
+  },
 };
 
 export default defineConfig(config);
