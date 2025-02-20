@@ -1,3 +1,4 @@
+
 import { useState, useEffect } from "react";
 import { cn } from "../utils";
 
@@ -54,7 +55,7 @@ const Navbar = () => {
             />
           </button>
         </div>
-        <div className="chat-with-chang-dee">
+        <a href="https://lin.ee/26m956C" className="chat-with-chang-dee">
           <img
             src="/chat-logo.svg"
             alt="chat-logo"
@@ -66,7 +67,7 @@ const Navbar = () => {
             src="/images/social-media/line.svg"
             alt="line"
           />
-        </div>
+        </a>
       </div>
     </nav>
   );
