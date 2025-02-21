@@ -1,4 +1,3 @@
-
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 import tailwindcss from "@tailwindcss/vite";
@@ -22,9 +21,10 @@ export default defineConfig(({ mode }) => {
         ".lovableproject.com"
       ],
       hmr: {
-        host: "2b1e5db9-1d79-4369-82f0-8adb51b07b0d.lovableproject.com",
+        clientPort: 443,
         protocol: "wss",
-        clientPort: 443
+        timeout: 120000,
+        overlay: true
       }
     },
     resolve: {
