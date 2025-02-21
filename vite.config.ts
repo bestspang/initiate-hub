@@ -3,7 +3,7 @@ import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 import tailwindcss from "@tailwindcss/vite";
 import { componentTagger } from "lovable-tagger";
-import path from "path";  
+import path from "path";
 import type { UserConfig } from "vite";
 
 export default defineConfig(({ mode }) => {

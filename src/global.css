@@ -1,10 +1,16 @@
 @import url("https://fonts.googleapis.com/css2?family=Prompt:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 @import "tailwindcss";
-@plugin "daisyui" {
-  prefix: "d-";
-  root: ":root";
-  logs: true;
-  themes: false;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    font-family: "Prompt", Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1;
+    font-weight: 400;
+  }
 }
 
 @theme {
@@ -28,21 +34,18 @@
   --breakpoint-2xl: 1400px;
   --breakpoint-3xl: 1600px;
 }
-:root {
-  font-family: "Prompt", Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  font-size: 16px;
-  line-height: 1;
-  font-weight: 400;
-}
+
 * {
   transition-property: all;
   transition-timing-function: ease-in-out;
   transition-duration: 300ms;
 }
+
 html {
   scroll-behavior: smooth;
   background-color: var(--color-grey);
 }
+
 #root {
   @apply h-full m-auto relative;
 }
@@ -54,6 +57,7 @@ html {
     content: url(data:image/svg+xml,%3Csvg%20width%3D%2218%22%20height%3D%2218%22%20viewBox%3D%220%200%2018%2018%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20d%3D%22M17.9202%205.42547C17.8142%204.89935%2017.4962%204.40939%2016.9322%204.09613L9.97165%200.241972C9.38931%20-0.0806574%208.6879%20-0.0806574%208.10556%200.241972L1.14504%204.09613C0.806107%204.28355%200.55747%204.53522%200.388659%204.81903C0.147874%205.11756%200%205.49642%200%205.91142V16.2784C0%2017.2249%200.757688%2018%201.68288%2018H16.3171C17.2423%2018%2018%2017.2249%2018%2016.2784V5.91142C18%205.7414%2017.9686%205.58076%2017.9228%205.42413L17.9202%205.42547Z%22%20fill%3D%22%23FFC100%22%2F%3E%3C%2Fsvg%3E);
   }
 }
+
 .view-more {
   @apply flex items-center gap-2 text-black font-medium text-nowrap;
   font-size: clamp(18px, calc(18px + (24 - 18) * (100vw - 768px) / (1920 - 768)), 24px);
