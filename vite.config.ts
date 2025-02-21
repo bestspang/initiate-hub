@@ -13,11 +13,16 @@ const config: UserConfig = {
     process.env.NODE_ENV === "development" && componentTagger(),
   ].filter(Boolean),
   server: {
-    host: "::",
+    host: "0.0.0.0",
     port: 8080,
     allowedHosts: [
-      "2b1e5db9-1d79-4369-82f0-8adb51b07b0d.lovableproject.com",
+      ".lovableproject.com"
     ],
+    hmr: {
+      host: "2b1e5db9-1d79-4369-82f0-8adb51b07b0d.lovableproject.com",
+      protocol: "wss",
+      clientPort: 443
+    }
   },
   resolve: {
     alias: {
@@ -27,4 +32,5 @@ const config: UserConfig = {
 };
 
 export default defineConfig(config);
+
 
