@@ -1,5 +1,6 @@
+
 import { FC, Fragment } from "react";
-import { cn } from "../../utils";
+import { cn } from "@/utils";
 import LabelHouse from "../LabelHouse";
 
 type TabWhyUs = "tab1" | "tab2";
