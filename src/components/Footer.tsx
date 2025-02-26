@@ -16,7 +16,7 @@ const Footer: FC = () => {
               <a href="https://ecomm.globalhouse.co.th/DirectlinkChd" target="_blank" rel="noopener noreferrer">
                 <img src="/images/app-store.svg" alt="app-store" />
               </a>
-              <a href="#" target="_blank" rel="noopener noreferrer">
+              <a href="https://ecomm.globalhouse.co.th/DirectlinkChd" target="_blank" rel="noopener noreferrer">
                 <img src="/images/google-play.svg" alt="google-play" />
               </a>
             </div>
