@@ -29,3 +29,10 @@ const Banner1: FC = () => {
         <div className="powered-by">
           <span>Powered by</span>
           <img src="/global-house.svg" alt="global-house" />
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default Banner1;
