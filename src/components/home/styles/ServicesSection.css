@@ -12,7 +12,7 @@
     background-position: center;
   }
   .header {
-    @apply w-full text-center p-12 relative z-10 max-w-[800px];
+    @apply w-full text-center py-15 px-12 relative z-10 max-w-[800px];
     font-size: clamp(44px, calc(44px + (70 - 44) * (100vw - 768px) / (1920 - 768)), 70px);
     line-height: 1.2;
     .title {
