@@ -1,6 +1,6 @@
 
 import { FC } from "react";
-import { cn } from "../utils";
+import { cn } from "@/utils";
 
 interface LabelHouseProps {
   label: string;
