@@ -1,6 +1,6 @@
 
 import { FC, useState, useEffect } from "react";
-import { cn } from "../utils";
+import { cn } from "@/utils";
 
 const Navbar: FC = () => {
   const [scrolled, setScrolled] = useState<boolean>(false);
