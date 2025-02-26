@@ -58,7 +58,7 @@ const Banner2: FC<Banner2Props> = ({ activeIndex, setActiveIndex, setIsPaused })
           <div className="download-now">
             <h6>ดาวน์โหลดเลย</h6>
             <div className="btn-group">
-              <a href="#" target="_blank" rel="noopener noreferrer">
+              <a href="https://ecomm.globalhouse.co.th/DirectlinkChd" target="_blank" rel="noopener noreferrer">
                 <img src="/images/app-store.svg" alt="app-store" />
               </a>
               <a href="#" target="_blank" rel="noopener noreferrer">
