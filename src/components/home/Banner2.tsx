@@ -1,6 +1,6 @@
 
 import { FC } from "react";
-import { cn } from "../../utils";
+import { cn } from "@/utils";
 
 interface Banner2Props {
   activeIndex: number;
