@@ -5,15 +5,9 @@ import "./marquee.css";
 import "./global.css";
 
 import HomePage from "./pages/HomePage";
-import { Analytics } from "@vercel/analytics/react";
 
 const App = (): JSX.Element => {
-  return (
-    <>
-      <HomePage />
-      <Analytics />
-    </>
-  );
+  return <HomePage />;
 };
 
 export default App;
