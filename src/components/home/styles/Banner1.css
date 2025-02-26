@@ -1,7 +1,11 @@
 
 @reference "../../../global.css";
 .banner-1 {
-  @apply relative text-white overflow-hidden h-[900px] md:h-[500px] flex flex-col items-end;
+  @apply relative text-white overflow-hidden h-screen md:h-screen flex flex-col items-end;
+  min-height: 900px;
+  @media (min-width: 768px) {
+    min-height: 500px;
+  }
   background: url(/images/bg-banner-1.jpg) no-repeat center / cover;
   & > .content {
     @apply grid md:grid-cols-[auto_clamp(280px,calc(280px+((470-280)*(100%-768px)/(1920-768))),470px)_auto];
@@ -30,7 +34,7 @@
     .description {
       @apply order-2 md:order-3 flex flex-row items-center md:flex-col md:max-w-[245px] text-center m-auto md:pb-32;
       hr {
-        @apply h-[64px] md:h-auto w-auto md:w-full max-w-[105px];
+        @apply h-16 md:h-auto w-auto md:w-full max-w-[105px];
         @apply border-r md:border-r-0 border-t-0 md:border-t border-white/40;
         @apply mx-2 2xs:mx-5 md:mx-auto my-0 md:my-5 lg:my-6;
       }
