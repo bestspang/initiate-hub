@@ -1,6 +1,5 @@
 
 import { FC } from "react";
-import { Marquee } from "@devnomic/marquee";
 
 const ServicesSection: FC = () => {
   return (
@@ -14,15 +13,16 @@ const ServicesSection: FC = () => {
         </p>
       </div>
       <div className="service-lists">
-        <Marquee fade={true} pauseOnHover>
-          <div className="items">
-            {[...Array(14)].map((_, index) => (
-              <div className="item" key={index + 1}>
-                <img src={`/images/chang-d-services/${index + 1}.svg`} alt={`service-${index + 1}`} />
-              </div>
-            ))}
-          </div>
-        </Marquee>
+        <div className="flex justify-around gap-[1rem] [--gap:1rem] animate-marquee">
+          {[...Array(14)].map((_, index) => (
+            <div className="service-item" key={index + 1}>
+              <img
+                src={`/images/chang-d-services/${index + 1}.svg`}
+                alt={`service-${index + 1}`}
+              />
+            </div>
+          ))}
+        </div>
       </div>
     </section>
   );
