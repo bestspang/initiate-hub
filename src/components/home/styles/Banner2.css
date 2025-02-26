@@ -3,7 +3,7 @@
 .banner-2 {
   @apply grid grid-cols-1 md:grid-cols-2;
   .content-left {
-    @apply relative flex items-center justify-end;
+    @apply relative hidden md:flex items-center justify-end;
     height: clamp(500px, calc(500px + (500 - 50) * (100vw - 768px) / (1920 - 768)), 800px);
     background: linear-gradient(0deg, var(--color-dark-green) 3.12%, rgba(4, 143, 67) 100%);
     &::before {
