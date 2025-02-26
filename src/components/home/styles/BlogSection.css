@@ -1,0 +1,63 @@
+
+@reference "../../../global.css";
+.blog {
+  @apply p-10;
+  background: linear-gradient(0deg, rgba(0, 71, 5, 0.2) 20%, rgba(0, 71, 5, 0) 100%), white;
+  .header {
+    @apply flex flex-col items-center justify-center p-10 max-w-[1440px] m-auto;
+    .sub-title {
+      @apply mb-5;
+    }
+    .title {
+      @apply grid grid-cols-[120px_auto_120px] justify-between items-baseline gap-5 w-full;
+      font-size: clamp(44px, calc(44px + (70 - 44) * (100vw - 768px) / (1920 - 768)), 70px);
+      h1 {
+        @apply flex flex-col md:flex-row;
+        span {
+          @apply font-bold text-dark-green-2;
+        }
+      }
+      .view-more {
+        @apply float-end;
+      }
+    }
+  }
+  .blog-lists {
+    .swiper {
+      @apply pt-16 pb-8 relative max-w-[1440px];
+      .swiper-wrapper {
+        @apply pb-8;
+        .swiper-slide {
+          width: fit-content;
+          &:nth-child(odd) {
+            @apply -translate-y-16;
+          }
+        }
+      }
+      .swiper-pagination.swiper-pagination-progressbar {
+        @apply bg-black/10 rounded-[4px] top-auto bottom-0;
+        .swiper-pagination-progressbar-fill {
+          @apply bg-dark-green-2 rounded-[4px];
+        }
+      }
+    }
+    .blog-item {
+      @apply relative flex-none rounded-[10px] [&:not(:has(.detail))]:aspect-square overflow-hidden;
+      width: clamp(280px, calc(280px + (400 - 280) * (100vw - 768px) / (1920 - 768)), 400px);
+      img {
+        @apply rounded-[10px];
+      }
+      .detail {
+        @apply p-5 space-y-1;
+        .title {
+          @apply text-dark-green-2 leading-[1.3];
+          font-size: clamp(18px, calc(18px + (26 - 18) * (100vw - 768px) / (1920 - 768)), 26px);
+        }
+        .description {
+          @apply line-clamp-1 text-[#4F4F4F]/80;
+          font-size: clamp(12px, calc(12px + (18 - 12) * (100vw - 768px) / (1920 - 768)), 18px);
+        }
+      }
+    }
+  }
+}

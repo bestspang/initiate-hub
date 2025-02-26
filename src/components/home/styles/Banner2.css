@@ -1,0 +1,82 @@
+
+@reference "../../../global.css";
+.banner-2 {
+  @apply grid grid-cols-1 md:grid-cols-2;
+  .content-left {
+    @apply relative flex items-center justify-end;
+    height: clamp(500px, calc(500px + (500 - 50) * (100vw - 768px) / (1920 - 768)), 800px);
+    background: linear-gradient(0deg, var(--color-dark-green) 3.12%, rgba(4, 143, 67) 100%);
+    &::before {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background-image: url(/images/bg-banner-2.svg);
+      background-repeat: no-repeat;
+      background-position: top;
+      background-size: cover;
+      opacity: 0.6;
+    }
+    img[alt="application-mockup"] {
+      @apply absolute z-10 w-[628px] -right-5 lg:-right-10;
+    }
+  }
+  .content-right {
+    @apply flex items-center justify-center p-8 lg:p-12;
+    background: linear-gradient(180deg, #ffffff 0%, #f4f4f4 100%);
+    .content {
+      @apply flex flex-col w-full gap-8 max-w-[520px];
+      .chang-dee-application {
+        @apply flex items-center gap-2 font-medium;
+        font-size: clamp(20px, calc(20px + (24 - 20) * (100vw - 768px) / (1920 - 768)), 24px);
+        img[alt="icon-app"] {
+          width: clamp(50px, calc(50px + (60 - 50) * (100vw - 768px) / (1920 - 768)), 60px);
+        }
+      }
+      .slide {
+        .service-change-dee,
+        .product,
+        .market {
+          @apply text-black/30 whitespace-pre-line duration-500;
+          font-size: clamp(34px, calc(34px + (50 - 34) * (100vw - 768px) / (1920 - 768)), 50px);
+          &.active {
+            @apply space-y-1.5 my-8;
+            h1 {
+              @apply relative flex items-center gap-2 font-bold text-dark-green-2;
+              font-size: clamp(44px, calc(44px + (70 - 44) * (100vw - 768px) / (1920 - 768)), 70px);
+              &::before {
+                content: "";
+                width: 60px;
+                height: 1px;
+                background: linear-gradient(90deg, #004705 0%, rgba(0, 71, 5, 0) 100%);
+              }
+            }
+            p {
+              margin-left: 68px;
+              font-size: clamp(14px, calc(14px + (18 - 14) * (100vw - 768px) / (1920 - 768)), 18px);
+              color: black;
+              display: block;
+            }
+          }
+          h1 {
+            @apply cursor-pointer;
+          }
+          p {
+            display: none;
+          }
+        }
+      }
+      .download-now {
+        @apply space-y-2 font-medium text-center md:text-start;
+        font-size: clamp(18px, calc(18px + (24 - 18) * (100vw - 768px) / (1920 - 768)), 24px);
+        .btn-group {
+          @apply flex gap-4;
+          img {
+            @apply w-auto;
+            height: clamp(40px, calc(40px + (50 - 40) * (100vw - 768px) / (1920 - 768)), 50px);
+          }
+        }
+      }
+    }
+  }
+}

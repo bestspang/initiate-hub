@@ -1,0 +1,58 @@
+
+@reference "../../../global.css";
+.banner-1 {
+  @apply relative text-white overflow-hidden h-[900px] md:h-[500px] flex flex-col items-end;
+  background: url(/images/bg-banner-1.jpg) no-repeat center / cover;
+  & > .content {
+    @apply grid md:grid-cols-[auto_clamp(280px,calc(280px+((470-280)*(100%-768px)/(1920-768))),470px)_auto];
+    @apply mb-0 mt-auto w-full h-fit items-center justify-center gap-5 md:gap-10 px-5 md:px-12 lg:px-28;
+    .presenter {
+      @apply order-3 md:order-2;
+      .content {
+        @apply relative flex justify-end md:justify-center max-w-[355px] md:max-w-auto;
+        img {
+          @apply relative z-10 h-auto w-full md:w-[85%] -mr-4;
+        }
+        &::before {
+          @apply absolute w-full h-full content-[''] z-0 -mt-10 md:-mt-3;
+          background: url(/images/banner-1/background.svg) no-repeat center / contain;
+        }
+      }
+    }
+    .chang-dee {
+      @apply order-1 w-fit flex flex-col md:whitespace-pre-line leading-[1.5] text-center m-auto md:pb-28;
+      font-size: clamp(34px, calc(34px + (60 - 34) * (100vw - 768px) / (1920 - 768)), 60px);
+      span {
+        @apply text-yellow font-bold leading-none;
+        font-size: clamp(44px, calc(44px + (70 - 44) * (100vw - 768px) / (1920 - 768)), 70px);
+      }
+    }
+    .description {
+      @apply order-2 md:order-3 flex flex-row items-center md:flex-col md:max-w-[245px] text-center m-auto md:pb-32;
+      hr {
+        @apply h-[64px] md:h-auto w-auto md:w-full max-w-[105px];
+        @apply border-r md:border-r-0 border-t-0 md:border-t border-white/40;
+        @apply mx-2 2xs:mx-5 md:mx-auto my-0 md:my-5 lg:my-6;
+      }
+      :is(.service, .insurance) {
+        @apply w-fit flex flex-col leading-[1.5] text-center;
+        font-size: clamp(16px, calc(16px + (28 - 16) * (100vw - 768px) / (1920 - 768)), 28px);
+        span {
+          @apply font-bold;
+          font-size: clamp(20px, calc(20px + (34 - 20) * (100vw - 768px) / (1920 - 768)), 34px);
+        }
+      }
+      .insurance {
+        @apply max-w-[120px] md:w-fit md:max-w-full;
+      }
+    }
+    .powered-by {
+      @apply w-fit flex flex-col items-end space-y-1 absolute bottom-16 right-5 md:right-10 z-20;
+      font-size: clamp(12px, calc(12px + (14 - 12) * (100vw - 768px) / (1920 - 768)), 14px);
+      img {
+        width: auto;
+        height: clamp(34px, calc(34px + (42 - 34) * (100vw - 768px) / (1920 - 768)), 42px);
+      }
+    }
+  }
+}

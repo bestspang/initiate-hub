@@ -1,0 +1,81 @@
+
+@reference "../../../global.css";
+.banner-promotion {
+  @apply p-10 bg-white;
+  .swiper {
+    @apply max-w-[1440px];
+    img {
+      width: 100%;
+    }
+  }
+}
+
+.promotion {
+  @apply p-10;
+  background: linear-gradient(0deg, rgba(0, 71, 5, 0.2) 20%, rgba(0, 71, 5, 0) 100%), white;
+  .header {
+    @apply flex flex-col items-center justify-center p-10 max-w-[1440px] m-auto;
+    .sub-title {
+      @apply mb-5;
+    }
+    .title {
+      @apply grid grid-cols-[120px_auto_120px] justify-between items-baseline gap-5 w-full;
+      font-size: clamp(44px, calc(44px + (70 - 44) * (100vw - 768px) / (1920 - 768)), 70px);
+      h1 {
+        @apply flex flex-col md:flex-row;
+        span {
+          @apply font-bold text-dark-green-2;
+        }
+      }
+      .view-more {
+        @apply float-end;
+      }
+    }
+  }
+  .promotion-lists {
+    .swiper {
+      @apply pt-16 pb-8 relative max-w-[1440px];
+      .swiper-wrapper {
+        @apply pb-8;
+        .swiper-slide {
+          width: fit-content;
+          &:nth-child(odd) {
+            @apply -translate-y-16;
+          }
+        }
+      }
+
+      .swiper-pagination.swiper-pagination-progressbar {
+        @apply bg-black/10 rounded-[4px] top-auto bottom-0;
+        .swiper-pagination-progressbar-fill {
+          @apply bg-dark-green-2 rounded-[4px];
+        }
+      }
+    }
+    .promotion-item {
+      @apply relative flex-none rounded-[10px] [&:not(:has(.detail))]:aspect-square overflow-hidden;
+      width: clamp(280px, calc(280px + (400 - 280) * (100vw - 768px) / (1920 - 768)), 400px);
+      &:hover {
+        .view-detail-backdrop {
+          @apply z-0 visible opacity-100;
+          a {
+            @apply bottom-0;
+          }
+        }
+      }
+      img {
+        @apply rounded-[10px];
+      }
+      .view-detail-backdrop {
+        @apply -z-10 absolute invisible opacity-0 duration-150 inset-0 flex items-end justify-center p-5 pb-10;
+        background: linear-gradient(0deg, var(--color-dark-green) 3.12%, rgba(0, 71, 5, 0) 100%);
+        a {
+          @apply relative text-white duration-150 -bottom-[100%];
+          &::after {
+            @apply brightness-0 invert-100;
+          }
+        }
+      }
+    }
+  }
+}
