@@ -1,4 +1,6 @@
+
 import { FC, useEffect, useState } from "react";
+import "./styles/Navbar.css";
 
 interface NavbarProps {
   className?: string;
@@ -36,7 +38,7 @@ const Navbar: FC<NavbarProps> = ({ className = "" }) => {
         </div>
         <div className="menu-mobile">
           <button className="d-btn">
-            <img src="/menu.svg" alt="menu" />
+            <img src="/images/icon/menu.svg" alt="menu" />
           </button>
         </div>
         <div className="chat-with-chang-dee">
