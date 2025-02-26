@@ -1,0 +1,11 @@
+
+@reference "../../global.css";
+.container-home {
+  @apply flex flex-col items-center;
+  section {
+    @apply w-full;
+  }
+  .wrapper {
+    @apply max-w-[1440px] h-full m-auto relative;
+  }
+}

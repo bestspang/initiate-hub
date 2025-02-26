@@ -1,0 +1,72 @@
+
+@reference "../../global.css";
+.navbar {
+  @apply w-full fixed top-0 inset-x-0 z-50;
+  & * {
+    @apply transition-all duration-[50];
+  }
+  &.scrolled {
+    @apply bg-white border-b border-grey-2;
+    .container {
+      @apply text-black;
+      .go-home {
+        img[alt="logo"] {
+          @apply hidden;
+        }
+        img[alt="logo-2"] {
+          @apply block;
+        }
+      }
+      .menu-mobile {
+        .d-btn {
+          img[alt="menu"] {
+            filter: unset;
+          }
+        }
+      }
+      .chat-with-chang-dee {
+        @apply border border-dark-green-2;
+        box-shadow: 0px 16px 24px 0px rgba(0, 0, 0, 0.1);
+      }
+    }
+  }
+  .container {
+    @apply max-w-[1440px] m-auto grid grid-cols-[auto_auto_auto] gap-3 sm:gap-5 bg-transparent border-transparent justify-between items-center py-5 px-5 md:px-16 text-white;
+    .go-home {
+      img[alt="logo"] {
+        @apply block w-auto h-[60px];
+      }
+      img[alt="logo-2"] {
+        @apply hidden w-auto h-[60px];
+      }
+    }
+    .menu {
+      @apply hidden lg:flex gap-5;
+    }
+    .menu-mobile {
+      @apply flex lg:hidden gap-5;
+      .d-btn {
+        @apply p-0;
+        img[alt="menu"] {
+          filter: brightness(0) invert(1);
+        }
+      }
+    }
+    .chat-with-chang-dee {
+      @apply flex items-center w-fit gap-1 sm:gap-2 ps-2 pe-2 sm:pe-5 py-1 bg-white rounded-[58px] ml-auto;
+      img[alt="chat-logo"] {
+        width: clamp(30px, calc(30px + (43 - 30) * (100vw - 768px) / (1920 - 768)), 43px);
+      }
+      img[alt="line"] {
+        @apply hidden sm:block;
+      }
+      p {
+        @apply text-black font-medium;
+        font-size: clamp(10px, calc(10px + (16 - 10) * (100vw - 768px) / (1920 - 768)), 16px);
+        span {
+          @apply font-bold;
+        }
+      }
+    }
+  }
+}
