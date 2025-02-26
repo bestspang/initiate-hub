@@ -34,7 +34,7 @@
   }
   .promotion-lists {
     .swiper {
-      @apply pt-16 pb-8 relative max-w-[1440px];
+      @apply pt-16 pb-16 relative max-w-[1440px];
       .swiper-wrapper {
         @apply pb-8;
         .swiper-slide {
