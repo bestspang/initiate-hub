@@ -1,6 +1,5 @@
 
 import { FC } from "react";
-import { Marquee } from "@devnomic/marquee";
 
 const ServicesSection: FC = () => {
   return (
@@ -14,120 +13,36 @@ const ServicesSection: FC = () => {
         </p>
       </div>
       <div className="service-lists">
-        <Marquee fade={true} pauseOnHover>
-          <div className="service-item">
-            <img
-              src="/images/chang-d-services/1.svg"
-              alt="services-1"
-            />
-            <span>บริการ</span>
-            <p>ติดตั้งกลอนดิจิทัล</p>
+        <div className="group flex gap-[1rem] overflow-hidden flex-row" 
+          style={{
+            maskImage: "linear-gradient(to right, transparent 0%, rgb(0, 0, 0) 10%, rgb(0, 0, 0) 90%, transparent 100%)",
+            WebkitMaskImage: "linear-gradient(to right, transparent 0%, rgb(0, 0, 0) 10%, rgb(0, 0, 0) 90%, transparent 100%)"
+          }}>
+          <div className="flex justify-around gap-[1rem] [--gap:1rem] shrink-0 animate-marquee-left flex-row group-hover:[animation-play-state:paused]">
+            {[...Array(14)].map((_, index) => (
+              <div key={`service-${index + 1}`} className="service-item">
+                <img
+                  src={`/images/chang-d-services/${index + 1}.svg`}
+                  alt={`services-${index + 1}`}
+                />
+                <span>บริการ</span>
+                <p>ติดตั้งกลอนดิจิทัล</p>
+              </div>
+            ))}
           </div>
-          <div className="service-item">
-            <img
-              src="/images/chang-d-services/2.svg"
-              alt="services-2"
-            />
-            <span>บริการ</span>
-            <p>สำรวจหน้างาน</p>
+          <div className="flex justify-around gap-[1rem] [--gap:1rem] shrink-0 animate-marquee-left flex-row group-hover:[animation-play-state:paused]">
+            {[...Array(14)].map((_, index) => (
+              <div key={`service-${index + 1}-duplicate`} className="service-item">
+                <img
+                  src={`/images/chang-d-services/${index + 1}.svg`}
+                  alt={`services-${index + 1}`}
+                />
+                <span>บริการ</span>
+                <p>ติดตั้งกลอนดิจิทัล</p>
+              </div>
+            ))}
           </div>
-          <div className="service-item">
-            <img
-              src="/images/chang-d-services/3.svg"
-              alt="services-3"
-            />
-            <span>บริการ</span>
-            <p>ปั๊มน้ำ-ถังน้ำ</p>
-          </div>
-          <div className="service-item">
-            <img
-              src="/images/chang-d-services/4.svg"
-              alt="services-4"
-            />
-            <span>บริการ</span>
-            <p>เครื่องปรับอากาศ</p>
-          </div>
-          <div className="service-item">
-            <img
-              src="/images/chang-d-services/5.svg"
-              alt="services-5"
-            />
-            <span>บริการ</span>
-            <p>รางน้ำฝน</p>
-          </div>
-          <div className="service-item">
-            <img
-              src="/images/chang-d-services/6.svg"
-              alt="services-6"
-            />
-            <span>บริการ</span>
-            <p>เครื่องกรองน้ำ</p>
-          </div>
-          <div className="service-item">
-            <img
-              src="/images/chang-d-services/7.svg"
-              alt="services-7"
-            />
-            <span>บริการ</span>
-            <p>พวงหรีด</p>
-          </div>
-          <div className="service-item">
-            <img
-              src="/images/chang-d-services/8.svg"
-              alt="services-8"
-            />
-            <span>บริการ</span>
-            <p>เครื่องน้ำอุ่น-น้ำร้อน</p>
-          </div>
-          <div className="service-item">
-            <img
-              src="/images/chang-d-services/9.svg"
-              alt="services-9"
-            />
-            <span>บริการ</span>
-            <p>สุขภัณฑ์</p>
-          </div>
-          <div className="service-item">
-            <img
-              src="/images/chang-d-services/10.svg"
-              alt="services-10"
-            />
-            <span>บริการ</span>
-            <p>เครื่องใช้ในครัว</p>
-          </div>
-          <div className="service-item">
-            <img
-              src="/images/chang-d-services/11.svg"
-              alt="services-11"
-            />
-            <span>บริการ</span>
-            <p>กำจัดปลวก</p>
-          </div>
-          <div className="service-item">
-            <img
-              src="/images/chang-d-services/12.svg"
-              alt="services-12"
-            />
-            <span>บริการ</span>
-            <p>ทำความสะอาด</p>
-          </div>
-          <div className="service-item">
-            <img
-              src="/images/chang-d-services/13.svg"
-              alt="services-13"
-            />
-            <span>บริการ</span>
-            <p>เครื่องซักผ้า</p>
-          </div>
-          <div className="service-item">
-            <img
-              src="/images/chang-d-services/14.svg"
-              alt="services-14"
-            />
-            <span>บริการ</span>
-            <p>อื่นๆ</p>
-          </div>
-        </Marquee>
+        </div>
       </div>
     </section>
   );
