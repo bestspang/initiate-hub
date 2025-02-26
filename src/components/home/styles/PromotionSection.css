@@ -11,7 +11,7 @@
 }
 
 .promotion {
-  @apply p-10;
+  @apply py-5 px-10;
   background: linear-gradient(0deg, rgba(0, 71, 5, 0.2) 20%, rgba(0, 71, 5, 0) 100%), white;
   .header {
     @apply flex flex-col items-center justify-center p-10 max-w-[1440px] m-auto;
