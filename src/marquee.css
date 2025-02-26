@@ -5,15 +5,16 @@
 
 @layer components {
   .marquee {
-    @apply flex overflow-hidden;
+    display: flex;
+    overflow: hidden;
   }
 
   .marquee > * {
-    @apply mr-5;  /* This replaces gap-5 with margin-right */
+    margin-right: 1.25rem;  /* 5 * 0.25rem = 1.25rem, equivalent to previous spacing */
   }
 
   .marquee > *:last-child {
-    @apply mr-0;  /* Remove margin from last child */
+    margin-right: 0;
   }
 
   .animate-marquee-up {
